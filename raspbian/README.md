@@ -1,4 +1,0 @@
-Raspbian Lite
-===
-
-
