@@ -4,20 +4,7 @@
 #   This file is for specifying runtime dependencies
 #=
 
-# install homebrew
-function install_homebrew {
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  brew update
-  brew doctor
-}
-
-# install xcode
-function install_xcode {
-  xcode-select --install
-  xcodebuild -license accept            # Accept Xcode license via CLI
-}
-
-#= Ruby version installs
+## Individual install functions
 function ruby_241 {
   echo "Installing ruby v2.4.1"
   ruby-install ruby-2.4.1
@@ -33,10 +20,6 @@ function ruby_193 {
   ruby-install ruby-1.9.3
 }
 
-function fetch_dotfiles {
-  echo "Fetching dotfiles"
-  git clone $DOTFILES_PATH
-}
 
 function pip {
   echo "Installing Pip..."
@@ -45,6 +28,7 @@ function pip {
 }
 
 
+# Runtime Lists
 function ruby_runtime {
   ruby_241
   ruby_231

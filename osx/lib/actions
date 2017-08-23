@@ -1,5 +1,28 @@
 #!/usr/bin/env bash
 
+# install homebrew
+function install_homebrew {
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  brew doctor
+}
+
+# install xcode
+function install_xcode {
+  xcode-select --install
+  xcodebuild -license accept            # Accept Xcode license via CLI
+}
+
+function install_brew_pkgs {
+  #old function
+  brew_pkgs
+}
+function install_appstore_pkgs {
+  #old function
+  appstore_pkgs
+}
+
+
 function fetch_s3 {
   echo "Downloading $1..."
   aws s3 cp s3://$BUCKET_NAME/$FILE_NAME .
@@ -19,6 +42,10 @@ function checksum {
   ## hold
 #}
 
+function fetch_dotfiles {
+  echo "Fetching dotfiles"
+  git clone $DOTFILES_PATH
+}
 
 function mamp {
   fetch_s3 $MAMP_FILE 

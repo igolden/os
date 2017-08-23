@@ -5,6 +5,9 @@
 #   Store all package lists in here 
 #=
 
+#=
+# Homebrew Packages
+#=
 function brew_pkgs {
     brew install ruby-install           # Installation tool to manage rubies/gems
     brew install chruby                 # Tool to change ruby versions
@@ -28,6 +31,9 @@ function brew_pkgs {
     brew install httpie                 # Awesome http cli 
 }
 
+#=
+# App Store Package Downloads
+#=
 function appstore_pkgs {
   mas install 497799835               # Install XCode
   mas install 405399194               # Install Kindle
@@ -35,6 +41,9 @@ function appstore_pkgs {
   mas install 425424353               # Install The Unarchiver for corrupted zips
 }
 
+#=
+# Ruby runtime packages 
+#=
 function ruby_pkgs {
   gem install bundler
   gem install rails
@@ -45,10 +54,16 @@ function ruby_pkgs {
   gem install rspec
 }
 
+#=
+# JS runtime packages 
+#=
 function js_pkgs {
   npm install -g gulp fixme redux-cli react-native-cli browserify watchify webpack
 }
 
+#=
+# Development Apps 
+#=
 function developer_apps {
   mamp
   hexfiend
@@ -63,6 +78,9 @@ function developer_apps {
   iterm
 }
 
+#=
+# Creative Apps 
+#=
 function creative_apps {
   adobe_creative_cloud
   sketch
@@ -72,6 +90,9 @@ function creative_apps {
   zeplin
 }
 
+#=
+# Produtivity Apps 
+#=
 function productivity {
   alfred
   time_doctor
@@ -85,6 +106,9 @@ function productivity {
   toggl
 }
 
+#=
+# Media Apps 
+#=
 function media {
   screenhero
   macdown
@@ -94,16 +118,26 @@ function media {
   audacity
   sd_formatter
 } 
+
+#=
+# Database Apps 
+#=
 function databases {
   robomongo
   sequel_pro
 }
 
+#=
+# Text Editors 
+#=
 function editors {
   atom
   sublime_text
 }
 
+#=
+# Browsers 
+#=
 function browsers {
   chrome
   firefox

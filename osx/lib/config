@@ -5,7 +5,7 @@
 #   Functions related to setting up configuation
 #=
 
-function ssh {
+function install_ssh {
   cd $HOME
   mkdir .ssh
   cd .ssh
@@ -27,7 +27,11 @@ function configure_awscli {
   aws configure
 }
 
-function aws {
+function install_dotfiles {
+
+}
+
+function install_aws {
   install_awscli
   configure_awscli
 }
