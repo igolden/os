@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #=
 # runtime 
-#   This file is for specifying runtime dependencies
+#   Functions specific to building source code and 
+#   for provisioning a runtime environment
 #=
 
 ## Individual install functions
