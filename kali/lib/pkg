@@ -1,0 +1,153 @@
+#!/usr/bin/env bash
+#=
+# pkg
+## Downloadable lists for package managers
+    #- brew
+    #- apt
+    #- yum
+    #- mas
+    #- gem
+    #- pip
+    #- npm
+#=
+
+# Potential improvements:
+#   - read pkg list from yaml, json etc
+#   - loop over read list
+
+
+#=
+# Homebrew Packages
+#=
+function brew_pkgs {
+  echo "Brew pkgs"
+  # ...
+}
+
+#=
+# Apt Packages
+#=
+function apt_pkgs {
+  echo "apt pkgs"
+  # ...
+}
+
+#=
+# Yum Packages
+#=
+function yum_pkgs {
+  echo "yum pkgs"
+  # ...
+}
+
+#=
+# App Store Package Downloads
+#=
+function appstore_pkgs {
+  echo "Appstore pkgs"
+  # ...
+}
+
+#=
+# Ruby runtime packages 
+#=
+function ruby_pkgs {
+  gem install bundler
+  gem install rails
+  gem install jekyll
+  gem install mail_catcher
+  gem install dotenv
+  gem install rubocop
+  gem install rspec
+}
+
+#=
+# JS runtime packages 
+#=
+function js_pkgs {
+  npm install -g gulp fixme redux-cli react-native-cli browserify watchify webpack
+}
+
+#=
+# Development Apps 
+#=
+function developer_apps {
+  mamp
+  hexfiend
+  _docker
+  arduino
+  android_studio
+  paw
+  virtual_box
+  vagrant
+  chef
+  dash
+  iterm
+}
+
+#=
+# Creative Apps 
+#=
+function creative_apps {
+  adobe_creative_cloud
+  sketch
+  unity
+  blender
+  meshlab
+  zeplin
+}
+
+#=
+# Produtivity Apps 
+#=
+function productivity {
+  alfred
+  time_doctor
+  onepassword
+  fluid
+  spotify
+  spectacles
+  adobe_reader
+  google_drive
+  discord
+  toggl
+}
+
+#=
+# Media Apps 
+#=
+function media {
+  screenhero
+  macdown
+  zoom
+  # miro
+  skype
+  audacity
+  sd_formatter
+} 
+
+#=
+# Database Apps 
+#=
+function databases {
+  robomongo
+  sequel_pro
+}
+
+#=
+# Text Editors 
+#=
+function editors {
+  atom
+  sublime_text
+}
+
+#=
+# Browsers 
+#=
+function browsers {
+  chrome
+  firefox
+  opera
+}
+

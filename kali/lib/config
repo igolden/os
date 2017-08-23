@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+#=
+# config
+##   Functions related to setting up configuation
+    #- chshell
+    #- shelltheme
+    #- vimrc
+    #- vim plugins
+    #- bashrc
+    #- gitconfig
+    #- aws
+    #- ssh
+    #- private keys
+    #- dotfiles
+#=
+
+
+function install_ssh {
+  cd $HOME
+  mkdir .ssh
+  cd .ssh
+  # aws s3 ls s3://iangolden/authorized_keys
+}
+
+#=
+# SSH Keygen
+#   - generate a default ssh key
+#   @param email:string
+#=
+function ssh_keygen {
+  echo "Generating ssh key"
+  ssh-keygen -t rsa -b 4096 -C "email@example.com"
+}
+
+
+#= 
+# SSH Agent
+#   - add the default key to ssh-agent
+#=
+function ssh_agent {
+  # start agent
+  eval "$(ssh-agent -s)"
+  # config
+  text="Host * 
+  AddKeysToAgent yes 
+  UseKeychain yes 
+  IdentityFile ~/.ssh/id_rsa 
+  ssh-agent add "
+  echo $text >> ~/.ssh/config
+  # add
+  ssh-add -K ~/.ssh/id_rsa
+}
+
+# Install AWS
+function install_awscli {
+  pip3 install awscli --upgrade --user
+}
+
+# Configure AWS
+function configure_awscli {
+  # TODO -- conditional here to optionally configure later
+  #   - answer=read "Continue? y/n"
+  # TODO -- put setup credentials in S3
+  aws configure
+}
+
+function install_dotfiles {
+
+}
+
+function install_aws {
+  install_awscli
+  configure_awscli
+}
+
+

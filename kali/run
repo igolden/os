@@ -1,0 +1,76 @@
+#!/bin/bash
+
+# source libs
+
+source ./lib/preflight
+source ./lib/pkg
+source ./lib/config
+source ./lib/runtime
+source ./lib/actions
+
+
+#===========================================================
+# Core
+#   - the core function groups
+#===========================================================
+
+#b Install OSX specific dependencies
+function os_setup {
+  # need to install all databases
+  echo 'OS SETUP'
+
+  setup_os
+  install_homebrew
+  install_xcode
+  install_brew_pkgs
+  install_appstore_pkgs
+}
+
+function install_runtimes {
+  echo 'INSTALLING RUNTIMES'
+  ruby_runtime
+  python_runtime
+  # TODO
+  # databases
+  # go runtime
+  # c# runtime
+  # php runtime
+}
+
+function install_runtime_pkgs {
+  echo 'INSTALLING RUNTIME PKGS'
+  ruby_pkgs
+  js_pkgs
+  #python_pkgs
+}
+
+function shconfig {
+  echo 'CONFIGURING THE SHELL ENV'
+  install_aws
+  install_dotfiles
+  install_ssh
+}
+
+function os_apps {
+  echo "INSTALLING"
+  developer_apps
+  creative_apps
+  databases
+  browsers
+  editors
+  media
+}
+
+#===========================================================
+# RUN
+#===========================================================
+
+run() {
+  preflight
+  os_setup
+  install_runtimes
+  install_runtime_pkgs
+  shconfig
+  os_apps
+}
+run

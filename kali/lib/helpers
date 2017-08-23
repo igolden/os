@@ -1,0 +1,61 @@
+#!/usr/bin/env bash
+
+#=
+# S3 Download
+#   - generic s3 download, uses $BUCKET_NAME
+#   - assumes logged in via awscli already
+#=
+function fetch_s3 {
+  echo "Downloading $1..."
+  #aws s3 cp s3://$BUCKET_NAME/$FILE_NAME .
+}
+
+#=
+# Unzip 
+#   - function to unzip file
+#   @param path:string
+#   @param output:string -- output path
+#=
+function unzip {
+  echo "Unzipping"
+}
+
+#=
+# YN prompt
+#   - simple prompt for y\n forced
+#   @param message:string -- message to display in prompt
+#=
+function prompt_yn {
+  #pseudo
+  answer=read "Continue? [y/n]"
+  if [ $answer -e 'y' || $answer -e 'n' ]; then
+    # handle y/n
+  else
+    # restart loop
+  fi
+}
+
+
+#=
+# Verify Shasum
+#   - prints out shasum, checks against manifest 
+#=
+function checksum {
+  echo "Verifying integrity of download..."
+}
+
+#=
+# Unpackage Installer
+#   - Run installer, move application
+#=
+function unpackage {
+  echo "Unpackaging app."
+}
+
+#=
+# Move to Applications
+#   - Simple function to move $1 to /Applications 
+#=
+function move_to_applications {
+  echo "Moving to apps"
+}

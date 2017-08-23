@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#=
+# preflight
+## System checks before taking flight 
+    #- Machine version info
+    #- Check if using correct install script
+    #- Dialogue and configuration
+    #- Initial prompt to the user
+#=
+
+function preflight {
+  echo "PREFLIGHT"
+}

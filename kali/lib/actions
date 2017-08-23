@@ -1,0 +1,146 @@
+#!/usr/bin/env bash
+#=
+# Actions
+##  Functions that take explicit action, begin w/ a verb 
+#   - awscli 
+#   - github
+#   - pkg-installs
+#   - make
+#   - shasum check
+#   - download files
+#   - ping webhook
+#=
+
+
+#=
+# Setup OS
+#   - generic function to install OS package manager
+#   - update current OS, packages 
+#=
+function setup_os {
+  echo "SETUP OS"
+  # install xcode (or equiv)
+  # install package manager, update 
+  # user setup
+}
+
+#=
+# User Setup
+#   - generic user setup, with groups and sudoer
+#   @params group:string
+#   @params username:string
+#=
+function user_setup {
+  echo "User Setup"
+  # create user group
+  # add group to sudoers
+  # create user set  home
+  # set user passwd
+  # add user to group
+  # grant additional permissions
+}
+
+#=
+# Install Shell
+#   - install and update shell
+#=
+function install_zsh {
+  echo "Installing shell"
+  # user command to change shell
+  # chsh -s /bin/zsh
+}
+
+
+#=
+# Install OS Packages
+#   - cli package manager
+#=
+function install_brew_pkgs {
+  #old function
+  brew_pkgs
+}
+
+#=
+# Install OS Packages
+#   - appstore apps
+#=
+function install_appstore_pkgs {
+  #old function
+  appstore_pkgs
+}
+
+
+
+#============================================================
+
+
+function fetch_dotfiles {
+  echo "Fetching dotfiles"
+  git clone $DOTFILES_PATH
+}
+
+function mamp {
+  fetch_s3 $MAMP_FILE 
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function hexfiend {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function iterm {
+  fetch s3 $ITERM_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+# 'do' conflicts, thus _docker
+function _docker {
+  fetch s3 $DOCKER_FILE
+}
+
+function arduino {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function android_studio {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function paw {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function virtual_box {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function vagrant {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function chef {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function dash {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+

@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#=
+# runtime 
+#   Functions specific to building source code and 
+#   for provisioning a runtime environment
+#=
+
+## Individual install functions
+function ruby_241 {
+  echo "Installing ruby v2.4.1"
+  ruby-install ruby-2.4.1
+}
+
+function ruby_231 {
+  echo "Installing ruby v2.3.1"
+  ruby-install ruby-2.3.1
+}
+
+function ruby_193 {
+  echo "Installing ruby v1.9.3"
+  ruby-install ruby-1.9.3
+}
+
+
+function pip {
+  echo "Installing Pip..."
+  curl -O https://bootstrap.pypa.io/get-pip.py
+  python3 get-pip.py
+}
+
+
+# Runtime Lists
+function ruby_runtime {
+  ruby_241
+  ruby_231
+  ruby_193
+}
+
+function python_runtime {
+  pip
+}
+
