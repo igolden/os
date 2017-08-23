@@ -2,9 +2,9 @@
 
 # source libs
 
+source ./lib/preflight
 source ./lib/pkg
 source ./lib/config
-source ./lib/preflight
 source ./lib/runtime
 source ./lib/actions
 

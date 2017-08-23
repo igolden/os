@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
+#=
+# pkg
+## Downloadable lists for package managers
+    #- brew
+    #- apt
+    #- yum
+    #- mas
+    #- gem
+    #- pip
+    #- npm
+#=
 
-#=
-# pkg 
-#   Store all package lists in here 
-#=
 
 #=
 # Homebrew Packages
@@ -20,6 +27,8 @@ function brew_pkgs {
     brew install platformio             # IoT builds in the terminal with platformio
     brew install node                   # NPM/Node for runtime js
     brew install watchman               # Used for watching files in React
+    brew install tmate                  # Teminal sharing 
+    brew install tmux                   # Original terminal multiplexer 
     brew install yarn                   # NPM alternative
     brew install imagemagick            # Image media cli, used a lot in rails
     brew install ansible                # Provisioning playbooks
@@ -29,6 +38,7 @@ function brew_pkgs {
     brew install mas                    # Mac Apple Store utility. Can install/update programs
     brew install moreutils              # Additional unix tools
     brew install httpie                 # Awesome http cli 
+    brew install links                  # CLI for browsing the web 
 }
 
 #=

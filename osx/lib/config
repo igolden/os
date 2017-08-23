@@ -1,9 +1,19 @@
 #!/usr/bin/env bash
-
 #=
 # config
-#   Functions related to setting up configuation
+##   Functions related to setting up configuation
+    #- chshell
+    #- shelltheme
+    #- vimrc
+    #- vim plugins
+    #- bashrc
+    #- gitconfig
+    #- aws
+    #- ssh
+    #- private keys
+    #- dotfiles
 #=
+
 
 function install_ssh {
   cd $HOME

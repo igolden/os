@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+#=
+# Actions
+##  Functions that take explicit action, begin w/ a verb 
+#   - awscli 
+#   - github
+#   - pkg-installs
+#   - make
+#   - shasum check
+#   - download files
+#   - ping webhook
+#=
 
 # install homebrew
 function install_homebrew {
@@ -11,6 +22,10 @@ function install_homebrew {
 function install_xcode {
   xcode-select --install
   xcodebuild -license accept            # Accept Xcode license via CLI
+}
+
+function install_zsh {
+  usermod -s /usr/local/bin/zsh igolden
 }
 
 function install_brew_pkgs {
