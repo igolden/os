@@ -1,0 +1,57 @@
+#!/usr/bin/env bash
+#=
+# runtime 
+#   This file is for specifying runtime dependencies
+#=
+
+# install homebrew
+function install_homebrew {
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+  brew doctor
+}
+
+# install xcode
+function install_xcode {
+  xcode-select --install
+  xcodebuild -license accept            # Accept Xcode license via CLI
+}
+
+#= Ruby version installs
+function ruby_241 {
+  echo "Installing ruby v2.4.1"
+  ruby-install ruby-2.4.1
+}
+
+function ruby_231 {
+  echo "Installing ruby v2.3.1"
+  ruby-install ruby-2.3.1
+}
+
+function ruby_193 {
+  echo "Installing ruby v1.9.3"
+  ruby-install ruby-1.9.3
+}
+
+function fetch_dotfiles {
+  echo "Fetching dotfiles"
+  git clone $DOTFILES_PATH
+}
+
+function pip {
+  echo "Installing Pip..."
+  curl -O https://bootstrap.pypa.io/get-pip.py
+  python3 get-pip.py
+}
+
+
+function ruby_runtime {
+  ruby_241
+  ruby_231
+  ruby_193
+}
+
+function python_runtime {
+  pip
+}
+

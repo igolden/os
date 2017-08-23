@@ -1,0 +1,112 @@
+#!/usr/bin/env bash
+
+#=
+# pkg 
+#   Store all package lists in here 
+#=
+
+function brew_pkgs {
+    brew install ruby-install           # Installation tool to manage rubies/gems
+    brew install chruby                 # Tool to change ruby versions
+    brew install zsh                    # Better shell scripting
+    brew install vim                    # Fast, ubiquitous text editor 
+    brew install git                    # Source control w/ Git
+    brew install heroku                 # Install heroku toolbelt
+    brew install hub                    # Github cli utility
+    brew install ack                    # Fast file search
+    brew install platformio             # IoT builds in the terminal with platformio
+    brew install node                   # NPM/Node for runtime js
+    brew install watchman               # Used for watching files in React
+    brew install yarn                   # NPM alternative
+    brew install imagemagick            # Image media cli, used a lot in rails
+    brew install ansible                # Provisioning playbooks
+    brew install wget                   # cURL alternative, GET/Download cli tool
+    brew install redis                  # Cache db
+    brew install ffmpeg                 # Video transcoding tool
+    brew install mas                    # Mac Apple Store utility. Can install/update programs
+    brew install moreutils              # Additional unix tools
+    brew install httpie                 # Awesome http cli 
+}
+
+function appstore_pkgs {
+  mas install 497799835               # Install XCode
+  mas install 405399194               # Install Kindle
+  mas install 476533227               # Install Prepo for iOS icon creation
+  mas install 425424353               # Install The Unarchiver for corrupted zips
+}
+
+function ruby_pkgs {
+  gem install bundler
+  gem install rails
+  gem install jekyll
+  gem install mail_catcher
+  gem install dotenv
+  gem install rubocop
+  gem install rspec
+}
+
+function js_pkgs {
+  npm install -g gulp fixme redux-cli react-native-cli browserify watchify webpack
+}
+
+function developer_apps {
+  mamp
+  hexfiend
+  _docker
+  arduino
+  android_studio
+  paw
+  virtual_box
+  vagrant
+  chef
+  dash
+  iterm
+}
+
+function creative_apps {
+  adobe_creative_cloud
+  sketch
+  unity
+  blender
+  meshlab
+  zeplin
+}
+
+function productivity {
+  alfred
+  time_doctor
+  onepassword
+  fluid
+  spotify
+  spectacles
+  adobe_reader
+  google_drive
+  discord
+  toggl
+}
+
+function media {
+  screenhero
+  macdown
+  zoom
+  # miro
+  skype
+  audacity
+  sd_formatter
+} 
+function databases {
+  robomongo
+  sequel_pro
+}
+
+function editors {
+  atom
+  sublime_text
+}
+
+function browsers {
+  chrome
+  firefox
+  opera
+}
+

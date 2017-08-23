@@ -1,0 +1,87 @@
+#!/usr/bin/env bash
+
+function fetch_s3 {
+  echo "Downloading $1..."
+  aws s3 cp s3://$BUCKET_NAME/$FILE_NAME .
+}
+
+function checksum {
+  echo "Verifying integrity of download..."
+  # echo shasum
+  # match shasums
+}
+
+#function unpackage {
+  ## hold
+#}
+
+#function move_to_applications {
+  ## hold
+#}
+
+
+function mamp {
+  fetch_s3 $MAMP_FILE 
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function hexfiend {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function iterm {
+  fetch s3 $ITERM_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+# 'do' conflicts, thus _docker
+function _docker {
+  fetch s3 $DOCKER_FILE
+}
+
+function arduino {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function android_studio {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function paw {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function virtual_box {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function vagrant {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function chef {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
+function dash {
+  fetch s3 $HEXFIEND_FILE
+  # checksum
+  # unpackage or move_to_applications
+}
+
