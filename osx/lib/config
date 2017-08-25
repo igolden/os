@@ -19,9 +19,10 @@ function install_ssh {
   cd $HOME
   mkdir .ssh
   cd .ssh
-  ssh-keygen
+  ssh-keygen -t rsa -b 4096 -C "ian@iangolden.com"
+  eval "$(ssh-agent -s)"
+  ssh-add
   # aws s3 ls s3://iangolden/authorized_keys
-  ssh-agent add
 }
 
 # Install AWS
