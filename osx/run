@@ -44,8 +44,7 @@ function install_runtime_pkgs {
 
 function shconfig {
   echo 'CONFIGURING THE SHELL ENV'
-  install_aws
-  install_dotfiles
+  install_awscli
   install_ssh
 }
 
@@ -69,6 +68,6 @@ run() {
   install_runtimes
   install_runtime_pkgs
   shconfig
-  os_apps
+#  os_apps
 }
 run

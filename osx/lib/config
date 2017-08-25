@@ -26,7 +26,8 @@ function install_ssh {
 
 # Install AWS
 function install_awscli {
-  pip3 install awscli --upgrade --user
+  sudo pip install awscli --upgrade --user
+  configure_awscli
 }
 
 # Configure AWS
@@ -37,9 +38,7 @@ function configure_awscli {
   aws configure
 }
 
-function install_dotfiles {
-
-}
+#function install_dotfiles {}
 
 function install_aws {
   install_awscli

@@ -21,7 +21,7 @@ function install_homebrew {
 # install xcode
 function install_xcode {
   xcode-select --install
-  xcodebuild -license accept            # Accept Xcode license via CLI
+  sudo xcodebuild -license accept            # Accept Xcode license via CLI
 }
 
 function install_zsh {
