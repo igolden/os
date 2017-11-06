@@ -49,13 +49,9 @@ function checksum {
   # match shasums
 }
 
-#function unpackage {
-  ## hold
-#}
+#function unpackage {}
 
-#function move_to_applications {
-  ## hold
-#}
+#function move_to_applications {}
 
 function fetch_dotfiles {
   echo "Fetching dotfiles"
