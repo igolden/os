@@ -26,7 +26,7 @@ function os_setup {
 
 function install_runtimes {
   echo 'INSTALLING RUNTIMES'
-  ruby_runtime
+  #ruby_runtime
   python_runtime
   # TODO
   # databases
@@ -63,8 +63,8 @@ function os_apps {
 #===========================================================
 
 run() {
-  preflight
-  os_setup
+#  preflight
+#  os_setup
   install_runtimes
   install_runtime_pkgs
   shconfig
