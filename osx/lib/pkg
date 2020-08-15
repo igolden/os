@@ -39,7 +39,10 @@ function brew_pkgs {
     brew install moreutils              # Additional unix tools
     brew install httpie                 # Awesome http cli 
     brew install links                  # CLI for browsing the web 
-}
+    brew install libmagic               # TODO
+    brew install youtube-dl               # TODO
+
+
 
 #=
 # App Store Package Downloads
